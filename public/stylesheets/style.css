@@ -26,3 +26,16 @@ body {
 .todo__form {
   padding: 20px 0;
 }
+
+.todos__list {
+  width: 50vw;
+}
+
+.todo--list-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-group-item  {
+  flex: 2 1 auto;
+}

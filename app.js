@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/', indexRouter);
-app.use('/todos', todosRouter);
+app.use('/api', todosRouter);
 
 
 module.exports = app;

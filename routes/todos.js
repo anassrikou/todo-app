@@ -1,19 +1,26 @@
 const express = require('express');
-const { appendFile } = require('fs');
-const path = require('path');
 
 const router = express.Router();
-const file = path.join(__dirname, 'todolist.txt');
+const todolist = [];
 
 /* GET users listing. */
-router.get('/', (req, res, next) => {
-  res.send('respond with a resource');
+router.get('/todos', (req, res, next) => {
+  res.json(todolist);
 });
 
-router.post('/', (req, res) => {
+router.post('/todos', (req, res) => {
   console.log(req.body);
-  appendFile(file, req.body.todo, f => console.log(f));
+  todolist.push(req.body);  
+  console.log(todolist);
   res.json({ message : 'ok' });
 });
+
+router.put('/todos/:id', (req, res) => {
+  res.json({ 'update': 'ok' });
+});
+
+router.delete('/todos/:id', (req, res) => {
+  res.json({ 'deleted': 'ok' });
+})
 
 module.exports = router;
