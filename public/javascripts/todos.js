@@ -31,10 +31,10 @@ function renderTodo(item) {
     console.log("rendering todo", item);
     const todo_list = document.querySelector('.todo--list-group');
     const markup = `
-    <div class="list-group-item" data-id=${item.id}>
+    <div class="list-group-item ${item.done ? 'completed' : ''}" data-id=${item.id}>
         <span class="todo__text">${item.todo}</span>
         <div class="btn-group float-right" role="group" aria-label="Basic example">
-        <button class="btn btn-success todo-done">done</button>
+        <button class="btn btn-success todo-done">${item.done ? 'undo' : 'done'}</button>
         <button class="btn btn-danger todo-delete">delete</button>
         </div>
     </div>
@@ -80,12 +80,12 @@ function handleBtnClick(e) {
     // get the actual button not whats inside it
     const clickedbtn = e.target ;
     console.log("clicked btn", clickedbtn);
-    if (clickedbtn.classList.toString().includes('done')) return todoDone(todo);
+    if (clickedbtn.classList.toString().includes('done')) return toggleDone(todo);
     else if (clickedbtn.classList.toString().includes('delete')) return todoDelete(todo);
     else alert('error');
 }
 
-function todoDone(todo) {
+function toggleDone(todo) {
     console.log("done" , todo);
     $.ajax({
         url: `api/todos/${todo[1].dataset.id}`,
@@ -94,7 +94,7 @@ function todoDone(todo) {
             console.log(response, status, xhr);
             // update the element classes
             console.log("done todo", todo);
-            todo[1].classList.add('completed');
+            todo[1].classList.toggle('completed');
         },
         error: function (xhr, status, message) {
             console.log(xhr, status, message);

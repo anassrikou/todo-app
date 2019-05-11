@@ -20,7 +20,7 @@ router.get('/todos', (req, res, next) => {
 router.post('/todos', (req, res) => {
   console.log('req bodo', req.body);
   const id = uniqid.time();
-  const new_todo = { todo: req.body.todo , done: false, id };
+  const new_todo = { todo: req.body.todo , done: false, id, timestamp: new Date().toISOString() };
   fs.readFile(todo_file, async (error, data) => {
     try {
       if (error) await createNewTodoFile();

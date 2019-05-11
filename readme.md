@@ -119,8 +119,6 @@ npm start
 
 ## Usage
 
-  
-
 _please refer to the Documentation page on how to use this project (WIP)_
 
 <!-- Working on -->
@@ -129,20 +127,20 @@ _please refer to the Documentation page on how to use this project (WIP)_
 
  - [x] Create todo
  - [x] Read todo
- - [ ] Update todo
- - [ ] Delete todo
- - [ ] save todos in file
+ - [x] Update todo
+ - [x] Delete todo
+ - [x] save todos in file
+ - [x] date of creation
  - [ ] save todos in database
  - [ ] login system
- - [ ] date and expiration time for todo
+ - [ ] expiration time for todo
  - [ ] notification system
+ - [ ] unit testing
 
 
 <!-- CONTRIBUTING -->
 
 ## Contributing
-
-  
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -160,12 +158,8 @@ Contributions are what make the open source community such an amazing place to b
 
   
   
-  
-
 <!-- LICENSE -->
 
 ## License
-
-  
 
 Distributed under the MIT License. See `LICENSE` for more information.
