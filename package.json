@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon --ignore public/javascripts ./bin/www"
+    "start": "nodemon ./bin/www"
+  },
+  "nodemonConfig": {
+    "ignore": ["test/*", "public/*", "todos.json"]
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",

@@ -39,3 +39,12 @@ body {
 .list-group-item  {
   flex: 2 1 auto;
 }
+
+.list-group-item span {
+  width: 100%;
+}
+
+.completed {
+  font-style: italic;
+  background-color: rgba(127, 255, 212, .2);
+}
