@@ -48,3 +48,7 @@ body {
   font-style: italic;
   background-color: rgba(127, 255, 212, .2);
 }
+
+.completed span {
+  text-decoration: line-through;
+}

@@ -16,9 +16,9 @@ function getAllTodos() {
         success: function (response, status) {
             console.log(response, status);
             // do nothing is list is empty or there's an error
-            if (response.length === 0 || response.error) return;
+            if (!response.data || response.error) return;
 
-            response.forEach(element => renderTodo(element));
+            response.data.forEach(element => renderTodo(element));
 
         },
         error: function (xhr, status, message) {
@@ -61,7 +61,7 @@ function handleSubmit(e) {
             // clear the input field
             document.querySelector('#todo-form').reset();
 
-            renderTodo(response.new_todo);
+            renderTodo(response.data);
         },
         error: function (xhr, status, message) {
             console.log(xhr, status, message);

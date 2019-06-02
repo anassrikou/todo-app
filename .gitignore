@@ -69,6 +69,7 @@ typings/
 
 ### database
 *.db
+*.sqlite
 
 ### text and other useless stuff
 *.txt

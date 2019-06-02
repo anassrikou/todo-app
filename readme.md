@@ -127,11 +127,11 @@ _please refer to the Documentation page on how to use this project (WIP)_
 
  - [x] Create todo
  - [x] Read todo
- - [x] Update todo
+ - [x] Update todo (done or not done)
  - [x] Delete todo
  - [x] save todos in file
  - [x] date of creation
- - [ ] save todos in database
+ - [x] save todos in database
  - [ ] login system
  - [ ] expiration time for todo
  - [ ] notification system
